@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffedf5">
+  <title>Happy Birthday Anjali 🎀</title>
+  <style>
+    :root {
+      --pink: #ff6fae;
+      --deep: #b82f70;
+      --soft: #fff0f6;
+      --cream: #fffafc;
+      --text: #67364e;
+      --shadow: 0 18px 55px rgba(184, 47, 112, .15);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Trebuchet MS", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, #ffe0ed 0, transparent 28%),
+        radial-gradient(circle at 90% 25%, #f5e3ff 0, transparent 25%),
+        linear-gradient(135deg, #fff8fb, #ffeaf3 55%, #fff6fa);
+      overflow-x: hidden;
+    }
+    button { font: inherit; }
+    .wrap { width: min(920px, 92%); margin: auto; }
+    header { text-align: center; padding: 54px 12px 22px; position: relative; }
+    .eyebrow {
+      display: inline-block; padding: 8px 14px; border-radius: 999px;
+      background: rgba(255,255,255,.78); border: 1px solid #ffd0e3;
+      font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 18px 0 10px; color: var(--deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 10vw, 5.4rem); line-height: .98;
+      text-shadow: 0 5px 0 rgba(255,255,255,.7);
+    }
+    .subtitle { max-width: 540px; margin: 14px auto 0; font-size: clamp(1rem, 3vw, 1.18rem); line-height: 1.7; }
+    .card {
+      background: rgba(255,255,255,.82); border: 1px solid rgba(255, 190, 218, .8);
+      border-radius: 28px; box-shadow: var(--shadow); padding: clamp(20px, 5vw, 38px);
+      backdrop-filter: blur(8px);
+    }
+    .hero-card { text-align: center; margin: 22px auto 26px; }
+    .cake-scene { position: relative; width: 220px; height: 205px; margin: 0 auto 16px; }
+    .cake { position: absolute; bottom: 15px; left: 25px; width: 170px; height: 100px; }
+    .cake-top {
+      position: absolute; top: 0; left: 0; width: 170px; height: 36px;
+      border-radius: 50%; background: #ffb7d4; border: 3px solid #fff;
+      box-shadow: inset 0 -6px 0 #f98ab9;
+    }
+    .cake-body {
+      position: absolute; top: 17px; left: 5px; width: 160px; height: 72px;
+      background: repeating-linear-gradient(90deg, #ff8fbd 0 20px, #ffa9cc 20px 40px);
+      border: 3px solid #fff; border-top: 0; border-radius: 0 0 18px 18px;
+    }
+    .icing {
+      position: absolute; top: 20px; left: 4px; width: 162px; height: 24px;
+      border-radius: 0 0 45% 45%; background: #fff4f8;
+      clip-path: polygon(0 0,100% 0,100% 60%,88% 100%,76% 60%,64% 100%,50% 60%,38% 100%,24% 60%,12% 100%,0 60%);
+    }
+    .plate {
+      position: absolute; bottom: 7px; left: 13px; width: 194px; height: 18px;
+      border-radius: 50%; background: #fff; border: 2px solid #ffc4dc;
+    }
+    .candle {
+      position: absolute; z-index: 2; bottom: 105px; left: 105px;
+      width: 12px; height: 43px; border-radius: 4px;
+      background: repeating-linear-gradient(135deg, #fff 0 6px, #ff76ad 6px 12px);
+    }
+    .flame {
+      position: absolute; width: 18px; height: 25px; left: 102px; bottom: 145px;
+      border-radius: 60% 40% 60% 40%; transform: rotate(45deg);
+      background: #ffc54f; box-shadow: 0 0 22px #ffb23f;
+      animation: flicker .75s ease-in-out infinite alternate;
+    }
+    @keyframes flicker { from { transform: rotate(40deg) scale(.92); } to { transform: rotate(50deg) scale(1.08); } }
+    .cake-scene.blown .flame { display: none; }
+    .btn {
+      border: 0; border-radius: 999px; padding: 13px 21px; margin: 6px;
+      color: white; font-weight: 700; cursor: pointer;
+      background: linear-gradient(135deg, #ff72ad, #e64d91);
+      box-shadow: 0 8px 18px rgba(230,77,145,.22);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 11px 22px rgba(230,77,145,.28); }
+    .btn:focus-visible { outline: 3px solid #9c2c67; outline-offset: 4px; }
+    .btn.secondary { background: white; color: var(--deep); border: 1px solid #ffc2da; box-shadow: none; }
+    .section { margin: 26px auto; }
+    h2 { color: var(--deep); font-family: Georgia, serif; font-size: clamp(1.65rem, 5vw, 2.3rem); margin: 0 0 12px; }
+    .center { text-align: center; }
+    .reason-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 20px; }
+    .reason {
+      min-height: 108px; padding: 15px 8px; border: 1px solid #ffd1e3;
+      border-radius: 18px; background: #fff7fb; cursor: pointer; color: var(--text);
+      transition: transform .18s ease, background .18s ease;
+    }
+    .reason:hover { transform: translateY(-4px); background: #ffe9f3; }
+    .reason .emoji { display: block; font-size: 1.7rem; margin-bottom: 7px; }
+    .reason small { display: block; font-size: .78rem; line-height: 1.4; }
+    .letter { display: none; margin-top: 18px; padding: 23px; border-radius: 20px; background: #fff5fa; border: 1px dashed #f58ab7; line-height: 1.85; text-align: left; }
+    .letter.show { display: block; animation: pop .45s ease both; }
+    @keyframes pop { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    .signature { color: var(--deep); font-weight: 800; }
+    .wish-box { text-align: center; background: linear-gradient(135deg, #fff, #fff0f7); }
+    footer { text-align: center; padding: 24px 10px 38px; font-size: .88rem; opacity: .8; }
+    .heart {
+      position: fixed; bottom: -35px; pointer-events: none; z-index: 10;
+      animation: float-up linear forwards; opacity: .82;
+      filter: drop-shadow(0 3px 3px rgba(184,47,112,.12));
+    }
+    @keyframes float-up {
+      0% { transform: translateY(0) rotate(0deg) scale(.7); opacity: 0; }
+      12% { opacity: .9; }
+      100% { transform: translateY(-115vh) rotate(35deg) scale(1.2); opacity: 0; }
+    }
+    .sparkle { color: #e45a98; }
+    .tiny { font-size: .86rem; opacity: .8; }
+    @media (max-width: 650px) {
+      header { padding-top: 36px; }
+      .reason-grid { grid-template-columns: repeat(2, 1fr); }
+      .reason:last-child { grid-column: 1 / -1; }
+      .cake-scene { transform: scale(.9); transform-origin: top center; margin-bottom: -2px; }
+      .card { border-radius: 23px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <span class="eyebrow">A tiny surprise made with care ✨</span>
+    <h1>Happy Birthday,<br>Anjali! 🎀</h1>
+    <p class="subtitle">Today is all about you — your smile, your dreams, and all the little things that make you wonderfully you. 💗</p>
+  </header>
+
+  <main class="wrap">
+    <section class="card hero-card" aria-label="Birthday cake">
+      <div class="cake-scene" id="cakeScene" role="img" aria-label="A pink birthday cake with a candle">
+        <div class="flame" id="flame"></div>
+        <div class="candle"></div>
+        <div class="cake">
+          <div class="cake-body"></div><div class="icing"></div><div class="cake-top"></div>
+        </div>
+        <div class="plate"></div>
+      </div>
+      <h2>Make a little birthday wish ✨</h2>
+      <p class="subtitle">Close your eyes for a second, make a wish, and tap the button.</p>
+      <button class="btn" id="wishBtn">I made a wish 💫</button>
+      <p id="wishReply" aria-live="polite" class="tiny"></p>
+    </section>
+
+    <section class="card section center">
+      <h2>Little things worth celebrating 💕</h2>
+      <p>Tap each card to reveal a little reminder.</p>
+      <div class="reason-grid">
+        <button class="reason" data-message="Your smile can make an ordinary day feel brighter. 🌷"><span class="emoji">🌷</span><small>Tap for a little reminder</small></button>
+        <button class="reason" data-message="You deserve kindness, peace, laughter, and lovely surprises. 🎁"><span class="emoji">🎁</span><small>Tap for a little reminder</small></button>
+        <button class="reason" data-message="Your dreams matter. Keep believing in the beautiful things ahead. ✨"><span class="emoji">✨</span><small>Tap for a little reminder</small></button>
+        <button class="reason" data-message="You make the world a little more lovely just by being yourself. 🌸"><span class="emoji">🌸</span><small>Tap for a little reminder</small></button>
+        <button class="reason" data-message="Today, and every day, I hope you find reasons to smile. 💗"><span class="emoji">💗</span><small>Tap for a little reminder</small></button>
+      </div>
+      <p id="reasonReply" class="subtitle" aria-live="polite"></p>
+    </section>
+
+    <section class="card section center">
+      <h2>A little letter, just for you 💌</h2>
+      <p>There's one more thing waiting for you.</p>
+      <button class="btn" id="letterBtn" aria-expanded="false" aria-controls="secretLetter">Open your secret letter 💌</button>
+      <article class="letter" id="secretLetter">
+        <p>Dear Anjali, 🎀</p>
+        <p>Happy Birthday to a truly special person! 🥹💗</p>
+        <p>Even though we're far apart today, I wanted to make a little corner of the internet just for you — something you can open whenever you need a smile.</p>
+        <p>I hope this new year of your life brings you peaceful days, exciting dreams, kind people, lots of laughter, and countless reasons to feel proud of yourself.</p>
+        <p>You deserve the little joys, the unexpected good news, the warm hugs, and all the beautiful moments still waiting for you. Keep being your lovely self, and never forget to celebrate how far you've come.</p>
+        <p>Today is your day, birthday girl. Make a wish, eat something delicious, laugh lots, and save a little happiness just for yourself. 🎂✨</p>
+        <p class="signature">Happy Birthday, Anjali! 💗<br>Made especially for you, with care. 🫶</p>
+      </article>
+    </section>
+
+    <section class="card section wish-box">
+      <h2>One last birthday wish 🌙</h2>
+      <p class="subtitle">May this year bring you more reasons to laugh, more courage to chase your dreams, and more moments that make your heart feel light.</p>
+      <p style="font-size:1.8rem; margin: 18px 0;">🎂 🌷 🎀 💖 ✨</p>
+      <button class="btn secondary" id="heartsBtn">Send some hearts 💕</button>
+    </section>
+  </main>
+
+  <footer>
+    Made with 💗 for Anjali · A little page to make your day brighter
+  </footer>
+
+  <script>
+    const heartSymbols = ["💗", "💕", "💖", "💘", "💞", "🌸", "✨"];
+    function makeHeart() {
+      const heart = document.createElement("span");
+      heart.className = "heart";
+      heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (16 + Math.random() * 22) + "px";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+      window.setTimeout(() => heart.remove(), 10500);
+    }
+    let heartTimer = window.setInterval(makeHeart, 850);
+    window.setTimeout(() => window.clearInterval(heartTimer), 18000);
+
+    document.getElementById("wishBtn").addEventListener("click", () => {
+      document.getElementById("cakeScene").classList.add("blown");
+      document.getElementById("wishReply").textContent = "Wish made! May something lovely find its way to you this year. 💗";
+      for (let i = 0; i < 18; i++) window.setTimeout(makeHeart, i * 75);
+    });
+
+    document.querySelectorAll(".reason").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.getElementById("reasonReply").textContent = button.dataset.message;
+      });
+    });
+
+    document.getElementById("letterBtn").addEventListener("click", (event) => {
+      const letter = document.getElementById("secretLetter");
+      const opening = !letter.classList.contains("show");
+      letter.classList.toggle("show", opening);
+      event.currentTarget.textContent = opening ? "Close your letter 💗" : "Open your secret letter 💌";
+      event.currentTarget.setAttribute("aria-expanded", String(opening));
+      if (opening) letter.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      for (let i = 0; i < 10; i++) window.setTimeout(makeHeart, i * 90);
+    });
+
+    document.getElementById("heartsBtn").addEventListener("click", () => {
+      for (let i = 0; i < 28; i++) window.setTimeout(makeHeart, i * 100);
+    });
+  </script>
+</body>
+</html>
